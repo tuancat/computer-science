@@ -47,6 +47,7 @@ public class MainClass {
         // Simple recognition with generic model
         recognizer.startRecognition(stream);
         SpeechResult result;
+        String fullSentences = "";
         while ((result = recognizer.getResult()) != null) {
 
             System.out.format("Hypothesis: %s\n", result.getHypothesis());
@@ -55,13 +56,14 @@ public class MainClass {
             for (WordResult r : result.getWords()) {
                 System.out.println(r);
                 System.out.println("word:" + r.getWord().toString());
+                fullSentences += r.getWord().toString() + " "; 
             }
 
             System.out.println("Best 3 hypothesis:");
             for (String s : result.getNbest(3)) {
                 System.out.println(s);
             }
-
+            System.out.println("full version:" + fullSentences);
         }
         recognizer.stopRecognition();
 
