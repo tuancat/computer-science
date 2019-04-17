@@ -23,22 +23,22 @@ public class VideoProcessTools {
         Mat frame = new Mat();
 
         // check if the capture is open
-        if (cap.) {
-            try {
-                // read the current frame
-                this.capture.read(frame);
-
-                // if the frame is not empty, process it
-                if (!frame.empty()) {
-                    // face detection
-                    this.detectAndDisplay(frame);
-                }
-
-            } catch (Exception e) {
-                // log the (full) error
-                System.err.println("Exception during the image elaboration: " + e);
-            }
-        }
+//        if (cap.) {
+//            try {
+//                // read the current frame
+//                this.capture.read(frame);
+//
+//                // if the frame is not empty, process it
+//                if (!frame.empty()) {
+//                    // face detection
+//                    this.detectAndDisplay(frame);
+//                }
+//
+//            } catch (Exception e) {
+//                // log the (full) error
+//                System.err.println("Exception during the image elaboration: " + e);
+//            }
+//        }
 
         return frame;
     }

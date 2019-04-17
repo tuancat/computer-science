@@ -39,10 +39,10 @@ public class NhandienBienso extends Application {
 //        root.getChildren().add(btn);
         
         GridMainPane gridPane = new GridMainPane();
-        BorderMainPane mainPane = new BorderMainPane(primaryStage);
+//        BorderMainPane mainPane = new BorderMainPane(primaryStage);
         
         
-        Scene scene = new Scene(mainPane, 300, 250);
+        Scene scene = new Scene(gridPane, 300, 250);
         
         primaryStage.setTitle("Thi Cuoi Kỳ");
         primaryStage.setScene(scene);
