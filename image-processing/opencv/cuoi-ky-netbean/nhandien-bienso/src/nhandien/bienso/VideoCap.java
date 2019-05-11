@@ -17,7 +17,7 @@ public class VideoCap {
     public static void main(String[] args) {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         VideoCapture cam = new VideoCapture(0);
-//        VideoCapture cap = new VideoCapture(filename);
+        VideoCapture cap = new VideoCapture("C:\\Users\\SamFisher\\Downloads\\Video2.MP4");
         
         if (!cam.isOpened()) {
             System.err.println("cam eeroed");

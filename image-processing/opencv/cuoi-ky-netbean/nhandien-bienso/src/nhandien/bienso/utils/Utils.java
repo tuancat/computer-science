@@ -12,7 +12,15 @@ import javafx.beans.property.ObjectProperty;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import org.opencv.core.Mat;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
 
+import org.opencv.core.Mat;
+
+import javafx.application.Platform;
+import javafx.beans.property.ObjectProperty;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
 /**
  *
  * @author SamFisher
@@ -72,6 +80,7 @@ public final class Utils {
         }
         return "";
     }
+
     public static Boolean checkFileIsImage(String fileName) {
         String ext = getFileExtension(fileName);
         if ("JPG".equals(ext.toUpperCase()) || "PNG".equals(ext.toUpperCase())) {
@@ -80,4 +89,8 @@ public final class Utils {
             return false;
         }
     }
+
+   
+
+
 }

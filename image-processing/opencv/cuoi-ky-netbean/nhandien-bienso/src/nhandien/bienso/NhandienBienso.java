@@ -11,8 +11,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import nhandien.bienso.ui.BorderMainPane;
-import nhandien.bienso.ui.GridMainPane;
+import nhandien.bienso.ui.VideoView;
 import org.opencv.core.Core;
 
 /**
@@ -20,30 +19,29 @@ import org.opencv.core.Core;
  * @author SamFisher
  */
 public class NhandienBienso extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        
+
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
-            
+
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
             }
         });
-        
+
 //        StackPane root = new StackPane();
 //        root.getChildren().add(btn);
-        
-        GridMainPane gridPane = new GridMainPane();
+//        GridMainPane gridPane = new GridMainPane();
 //        BorderMainPane mainPane = new BorderMainPane(primaryStage);
-        
-        
-        Scene scene = new Scene(gridPane, 300, 250);
-        
+        VideoView videoView = new VideoView();
+
+        Scene scene = new Scene(videoView, 300, 250);
+
         primaryStage.setTitle("Thi Cuoi Kỳ");
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
@@ -56,5 +54,5 @@ public class NhandienBienso extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

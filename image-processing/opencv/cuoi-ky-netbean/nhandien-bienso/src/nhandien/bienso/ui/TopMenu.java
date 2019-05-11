@@ -91,7 +91,7 @@ public class TopMenu extends HBox {
                     if (Utils.checkFileIsImage(file.getName())) {
                         System.err.println("type of file:" + file.getAbsolutePath());
                     }
-                    ImageProcessTools.drawPlate(file);
+//                    ImageProcessTools.drawPlate(file);
                 }
             });
             

@@ -78,35 +78,21 @@ public class GridMainPane extends GridPane {
 //        Mat newCoures = ImageProcessTools.find(candyImage, detectRect);
         this.img1.setImage(Utils.mat2Image(src));
         Mat imgThresh = PreProcess.preProcess(src); //quá trình tiền sử lý
-        
-        
+
         //quá trình xử lý loc ảnh lần 1 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 2 
         HashMap resultFilter1 = DetectPlates.findPossibleCharsInSceneFilter1(imgThresh);
         Mat imgContours = (Mat) resultFilter1.get("imgContours");
         List<PossibleChar> listOfPossibleChars = (List<PossibleChar>) resultFilter1.get("listOfPossibleChars");
         this.img2.setImage(Utils.mat2Image(imgContours));
-        
-        
-        
-         //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
+
+        //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
         HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(imgThresh, listOfPossibleChars);
         Mat imgContoursFilter2 = (Mat) resultFilter2.get("imgContours");
         Rect rectLibPlate = (Rect) resultFilter2.get("findRectLicPlates");
         this.img3.setImage(Utils.mat2Image(imgContoursFilter2));
-        
+
         Imgproc.rectangle(src, rectLibPlate, new Scalar(0, 255, 0), 3);
         this.img4.setImage(Utils.mat2Image(src));
-        
-        
-        
-//        Mat imgBiggestContours = DetectPlates.findBiggestInScene(imgThresh);
-//        this.img2.setImage(Utils.mat2Image(PreProcess.preProcess(src)));
-        
-//        this.img3.setImage(Utils.mat2Image(imgBiggestContours));
-//        System.out.println("detectRect:" + ImageProcessTools.plateRect.toString());
-//        Core.
-//        Imgproc.rectangle(src, ImageProcessTools.plateRect, new Scalar(0, 255, 0), 3);
-//        this.img4.setImage(Utils.mat2Image(src));
 
     }
 
