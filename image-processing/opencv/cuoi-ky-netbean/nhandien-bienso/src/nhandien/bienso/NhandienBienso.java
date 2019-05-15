@@ -5,13 +5,20 @@
  */
 package nhandien.bienso;
 
+import java.io.File;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import nhandien.bienso.ui.BorderMainPane;
+import nhandien.bienso.ui.TopMenu;
 import nhandien.bienso.ui.VideoView;
+import nhandien.bienso.utils.Utils;
 import org.opencv.core.Core;
 
 /**
@@ -37,10 +44,10 @@ public class NhandienBienso extends Application {
 //        StackPane root = new StackPane();
 //        root.getChildren().add(btn);
 //        GridMainPane gridPane = new GridMainPane();
-//        BorderMainPane mainPane = new BorderMainPane(primaryStage);
-        VideoView videoView = new VideoView();
+        BorderMainPane mainPane = new BorderMainPane(primaryStage);
+//        VideoView videoView = new VideoView();
 
-        Scene scene = new Scene(videoView, 300, 250);
+        Scene scene = new Scene(mainPane, 300, 250);
 
         primaryStage.setTitle("Thi Cuoi Kỳ");
         primaryStage.setScene(scene);
@@ -54,5 +61,5 @@ public class NhandienBienso extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
+    
 }

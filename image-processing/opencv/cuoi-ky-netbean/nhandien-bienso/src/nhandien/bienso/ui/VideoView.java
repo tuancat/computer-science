@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import nhandien.bienso.utils.DetectPlates;
 import nhandien.bienso.utils.PossibleChar;
@@ -28,7 +29,7 @@ import org.opencv.videoio.VideoCapture;
  *
  * @author SamFisher
  */
-public class VideoView extends GridPane {
+public class VideoView extends BorderPane {
 
     private ImageView img1;
     private static final String DEFAULT_URL = "Bike/0437.jpg";
@@ -39,22 +40,24 @@ public class VideoView extends GridPane {
 
     public VideoView() {
         this.setMinSize(400, 400);
-        this.setHgap(10);
-        this.setVgap(10);
         this.setPadding(new Insets(0, 10, 0, 10));
         initVideo();
-        
     }
 
     private void initVideo() {
         System.err.println("init image");
         this.img1 = new ImageView(defaultImage);
-        this.img1.setX(600);
-        this.img1.setY(400);
-        this.img1.setFitWidth(600);
+        this.img1.setX(1024);
+        this.img1.setY(1024);
+        this.img1.setFitWidth(1024);
         this.img1.setPreserveRatio(true);
-        this.add(img1, 0, 0);
+        this.setCenter(img1);
 
+    }
+
+    public void processVideo(String url) {
+        
+        capture = new VideoCapture(url);
         // grab a frame every 33 ms (30 frames/sec)
         Runnable frameGrabber = new Runnable() {
 
@@ -68,7 +71,7 @@ public class VideoView extends GridPane {
             }
         };
         this.timer = Executors.newSingleThreadScheduledExecutor();
-        this.timer.scheduleAtFixedRate(frameGrabber, 0, 33, TimeUnit.MILLISECONDS);
+        this.timer.scheduleAtFixedRate(frameGrabber, 0, 24, TimeUnit.MILLISECONDS);
     }
 
     /**
@@ -99,18 +102,19 @@ public class VideoView extends GridPane {
 
         return frame;
     }
+
     private void detectAndDisplayPlate(Mat src) {
         Mat imgThresh = PreProcess.preProcess(src); //quá trình tiền sử lý
         //quá trình xử lý loc ảnh lần 1 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 2 
         HashMap resultFilter1 = DetectPlates.findPossibleCharsInSceneFilter1(imgThresh);
         Mat imgContours = (Mat) resultFilter1.get("imgContours");
         List<PossibleChar> listOfPossibleChars = (List<PossibleChar>) resultFilter1.get("listOfPossibleChars");
-        
-         //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
+
+        //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
         HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(imgThresh, listOfPossibleChars);
         Mat imgContoursFilter2 = (Mat) resultFilter2.get("imgContours");
         Rect rectLibPlate = (Rect) resultFilter2.get("findRectLicPlates");
-        
+
         Imgproc.rectangle(src, rectLibPlate, new Scalar(0, 255, 0), 3);
     }
 

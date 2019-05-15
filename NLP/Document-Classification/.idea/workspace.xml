@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a51b59-d668-418f-b264-b369fa509f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FeatureTransformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/naive_bayes_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/svm_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text_classification_predict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transformer/feature_transformer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/winequality-red.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../tham-khao/machinelearning_codetudau-master/text_classification_example/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignment1/venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/venv/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text_classification_predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/text_classification_predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/Bao Cao Cuoi Ky v1.0.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/Bao Cao Cuoi Ky v1.0.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/cuoi-ky-diagram.vsdx" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/cuoi-ky-diagram.vsdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/NhandienBienso.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/NhandienBienso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/VideoCap.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/BorderMainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/BorderMainPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/GridMainPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/GridMainPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../image-processing/opencv/cuoi-ky-netbean/nhandien-bienso/src/nhandien/bienso/ui/TopMenu.java" afterDir="false" />
@@ -38,85 +29,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Document_Classification$text_classification_predict.coverage" NAME="text_classification_predict Coverage Results" MODIFIED="1557816223562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Document_Classification$text_classification_predict.coverage" NAME="text_classification_predict Coverage Results" MODIFIED="1557902139184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Document_Classification$test.coverage" NAME="test Coverage Results" MODIFIED="1557806048027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Document_Classification$main.coverage" NAME="main Coverage Results" MODIFIED="1557804831512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Document_Classification$main.coverage" NAME="main Coverage Results" MODIFIED="1557904459319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/svm_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="4" selection-end-column="46" />
+            <state relative-caret-position="263">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
+        <entry file="file://$PROJECT_DIR$/read_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/naive_bayes_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="289">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding>
-                <element signature="e#47#92#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transformer/feature_transformer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/text_classification_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="153">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="43" />
               <folding>
                 <element signature="e#46#65#0" expanded="true" />
               </folding>
@@ -125,10 +72,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/distlib/scripts.py">
+        <entry file="file://$PROJECT_DIR$/transformer/feature_transformer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="381" selection-start-line="381" selection-end-line="381" />
+            <state relative-caret-position="85">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/svm_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/naive_bayes_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="20" selection-start-line="17" selection-start-column="19" selection-end-line="19" selection-end-column="20" />
+              <folding>
+                <element signature="e#47#92#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,22 +131,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/model/naive_bayes_model.py" />
         <option value="$PROJECT_DIR$/venv/pyvenv.cfg" />
         <option value="$PROJECT_DIR$/FeatureTransformer.py" />
         <option value="$PROJECT_DIR$/transformer/feature_transformer.py" />
         <option value="$PROJECT_DIR$/model/svm_model.py" />
+        <option value="$PROJECT_DIR$/read-data.py" />
         <option value="$PROJECT_DIR$/text_classification_predict.py" />
+        <option value="$PROJECT_DIR$/read_data.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="25" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -182,16 +167,6 @@
               <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="Document-Classification" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Document-Classification" type="462c0819:PsiDirectoryNode" />
-              <item name="transformer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Document-Classification" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
@@ -227,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.text_classification_predict">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Document-Classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,9 +271,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.text_classification_predict" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -315,12 +290,13 @@
       <workItem from="1557721063464" duration="4715000" />
       <workItem from="1557798087648" duration="3821000" />
       <workItem from="1557807679014" duration="357000" />
-      <workItem from="1557808129141" duration="3913000" />
+      <workItem from="1557808129141" duration="6795000" />
+      <workItem from="1557886261988" duration="9995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12806000" />
+    <option name="totallyTimeSpent" value="25683000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,8 +309,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18603411" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14072494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,16 +348,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/model/__init__.py" />
     <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -391,17 +359,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/distlib/scripts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="824">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/read-data.py" />
     <entry file="file://$PROJECT_DIR$/model/naive_bayes_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="323">
+          <caret line="19" column="20" selection-start-line="17" selection-start-column="19" selection-end-line="19" selection-end-column="20" />
           <folding>
             <element signature="e#47#92#0" expanded="true" />
           </folding>
@@ -410,37 +379,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/transformer/feature_transformer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/svm_model.py">
+    <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="4" selection-end-column="46" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text_classification_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="e#46#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/svm_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="46" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/distlib/scripts.py">
+    <entry file="file://$PROJECT_DIR$/read_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="381" selection-start-line="381" selection-end-line="381" />
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/text_classification_predict.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="263">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
-            <element signature="e#46#65#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

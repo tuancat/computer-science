@@ -61,12 +61,14 @@ public class GridMainPane extends GridPane {
         this.add(img4, 1, 1);
         this.img3.setX(600);
         this.img3.setY(400);
-        callImageProcess();
+//        callImageProcess(DEFAULT_URL);
     }
 
-    private void callImageProcess() {
-        Image i = new Image(getClass().getClassLoader().getResourceAsStream(DEFAULT_URL));
-        Mat src = Imgcodecs.imread("resources/" + DEFAULT_URL);
+    public void callImageProcess(String url) {
+        if (url == null || "".equals(url)) {
+            url = DEFAULT_URL;
+        }
+        Mat src = Imgcodecs.imread(url);
 //        Mat resizeNewImage = ImageProcessTools.newWay(src);
 ////        Mat newWay = ImageProcessTools.newWay(src);
 //        Mat greyMat = ImageProcessTools.convertImageToGray(src);

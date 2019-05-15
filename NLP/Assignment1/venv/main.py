@@ -1,8 +1,11 @@
 import re;
 from base_tokenizer import BaseTokenizer
 from utils import load_n_grams
+from pyvi.pyvi import ViTokenizer, ViPosTagger
+from sklearn.base import TransformerMixin, BaseEstimator
+p
 
-text = 'tôi đang làm việc chăm chỉ'
+text = 'tốc độ truyền thông tin ngày càng nhanh'
 
 
 biGrams= load_n_grams('bi-grams.txt');
@@ -40,7 +43,7 @@ def tokenize(text):
                     result.append('_'.join([currWord, nextWord, next_next_word]))
                     currId += 3
                 elif twoWord in biGrams:
-                    result.append('_'.join([currWord, nextWord]))
+                    result.append('_'.join([currWo rd, nextWord]))
                     currId += 2
                 else:
                     result.append(currWord)

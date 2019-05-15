@@ -55,15 +55,7 @@ public class TopMenu extends HBox {
 //        fileChooser.showOpenDialog(primaryStage);
         this.getChildren().add(menuOption);
         this.getChildren().add(browseFile);
-        this.browseFile.setOnAction((ActionEvent event) -> {
-
-            String choose = menuOption.getValue().toString();
-            configureFileChooser(fileChooser, choose);
-            List<File> listFile = fileChooser.showOpenMultipleDialog(primaryStage);
-            if (listFile != null) {
-                processFiles(listFile);
-            }
-        });
+        
 
     }
 
@@ -78,25 +70,7 @@ public class TopMenu extends HBox {
 //        }
     }
 
-    private void processFiles(List<File> listFile) {
-        if (listFile.isEmpty()) {
-            Logger.getLogger(
-                    TopMenu.class.getName()).log(
-                    Level.SEVERE, null, "List Size File is empty"
-            );
-        } else {
-            int countIndex = 0;
-            listFile.forEach((file) -> {
-                if (chooseOption == 0) { //  choose image 
-                    if (Utils.checkFileIsImage(file.getName())) {
-                        System.err.println("type of file:" + file.getAbsolutePath());
-                    }
-//                    ImageProcessTools.drawPlate(file);
-                }
-            });
-            
-        }
-    }
+    
 
     private void processImage(File file) {
 
@@ -142,45 +116,5 @@ public class TopMenu extends HBox {
         this.chooseOption = chooseOption;
     }
 
-    private void configureFileChooser(
-            FileChooser fileChooser, String option) {
-
-        switch (option) {
-            case "Video":
-                chooseOption = 1;
-                fileChooser.setTitle("View Video");
-                fileChooser.setInitialDirectory(
-                        new File(System.getProperty("user.home"))
-                );
-                fileChooser.getExtensionFilters().addAll(
-                        //                new FileChooser.ExtensionFilter("All Images", "*.*"),
-                        new FileChooser.ExtensionFilter("MP4", "*.mp4"),
-                        new FileChooser.ExtensionFilter("AVI", "*.AVI")
-                );
-                break;
-            case "Image":
-            default:
-                chooseOption = 0;
-                fileChooser.setTitle("View Pictures");
-                fileChooser.setInitialDirectory(
-                        new File(System.getProperty("user.home"))
-                );
-                fileChooser.getExtensionFilters().addAll(
-                        //                new FileChooser.ExtensionFilter("All Images", "*.*"),
-                        new FileChooser.ExtensionFilter("JPG", "*.jpg"),
-                        new FileChooser.ExtensionFilter("PNG", "*.png")
-                );
-                break;
-
-        }
-//        fileChooser.setTitle("View Pictures");
-//        fileChooser.setInitialDirectory(
-//                new File(System.getProperty("user.home"))
-//        );
-//        fileChooser.getExtensionFilters().addAll(
-//                //                new FileChooser.ExtensionFilter("All Images", "*.*"),
-//                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
-//                new FileChooser.ExtensionFilter("PNG", "*.png")
-//        );
-    }
+    
 }

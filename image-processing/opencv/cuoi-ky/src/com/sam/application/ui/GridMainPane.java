@@ -1,7 +1,9 @@
 package com.sam.application.ui;
 
 
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
 
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
@@ -27,9 +29,12 @@ public class GridMainPane extends GridPane {
 		this.img2 = new ImageView(i);
 		this.add(img1, 0, 0);
 		this.add(img2, 1, 0);
+		processImage();
 	}
 	private void processImage() {
-		Mat src = new 
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);;
+		Mat src = Imgcodecs.imread(getClass().getClassLoader().getResourceAsStream("images/1.jpg").toString());
+		System.out.println("dump:+" + src.dump());
 	}
 
 }

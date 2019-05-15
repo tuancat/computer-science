@@ -21,6 +21,7 @@ import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
+
 /**
  *
  * @author SamFisher
@@ -90,7 +91,13 @@ public final class Utils {
         }
     }
 
-   
-
+    public static Boolean checkFileIsVideo(String fileName) {
+        String ext = getFileExtension(fileName);
+        if ("MP4".equals(ext.toUpperCase())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }

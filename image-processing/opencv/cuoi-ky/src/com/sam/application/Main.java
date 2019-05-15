@@ -1,5 +1,7 @@
 package com.sam.application;
 	
+import com.sam.application.ui.GridMainPane;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -11,7 +13,8 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
+			GridMainPane gridPane = new GridMainPane();
+			Scene scene = new Scene(gridPane,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();

@@ -35,8 +35,9 @@ class TextClassificationPredict(object):
 
         #  test data
         test_data = []
-        test_data.append({"feature": u"Nóng quá", "target": ""})
+        test_data.append({"feature": u"chào bạn", "target": ""})
         df_test = pd.DataFrame(test_data)
+
 
         # init model naive bayes
         # model = SVMModel()

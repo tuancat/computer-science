@@ -105,24 +105,6 @@ public class SpeechCalculator {
 			// Load model from the jar
 			configuration.setAcousticModelPath("resource:/output/demso");
 			configuration.setDictionaryPath("resource:/output/demso.dic");
-
-			// ====================================================================================
-			// =====================READ
-			// THIS!!!===============================================
-			// Uncomment this line of code if you want the recognizer to recognize every
-			// word of the language
-			// you are using , here it is English for example
-			// ====================================================================================
-			// configuration.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
-
-			// ====================================================================================
-			// =====================READ
-			// THIS!!!===============================================
-			// If you don't want to use a grammar file comment below 3 lines and uncomment
-			// the above line for language model
-			// ====================================================================================
-
-			// Grammar
 			configuration.setGrammarPath("resource:/grammars");
 			configuration.setGrammarName("vn");
 			configuration.setUseGrammar(true);
