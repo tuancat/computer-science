@@ -8,6 +8,7 @@ package nhandien.bienso.utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -23,7 +24,7 @@ public final class DetectPlates {
 
     public static HashMap findPossibleCharsInSceneFilter1(Mat imgThresh) {
         HashMap result = new HashMap<String, Object>();
-        
+
         List<PossibleChar> listOfPossibleChars = new ArrayList<PossibleChar>();
         int intCountOfPossibleChars = 0;
         Mat imgThreshCopy = imgThresh.clone();
@@ -50,61 +51,61 @@ public final class DetectPlates {
         }
         System.out.println("");
         System.out.println("step 2 - len(listOfPossibleCharsInScene) =" + listOfPossibleChars.size());
-        
+
         result.put("imgContours", imgContours);
         result.put("listOfPossibleChars", listOfPossibleChars);
         return result;
     }
-    
+
     public static HashMap findPossibleCharsInSceneFilter2(Mat imgThresh, List<PossibleChar> listOfPossibleChars) {
-        
+        Random rng = new Random(12345);
+
         HashMap result = new HashMap<String, Object>();
-        
+
         int intCountOfPossibleChars = 0;
-        Mat imgThreshCopy = imgThresh.clone(); 
-        
-        
+        Mat imgThreshCopy = imgThresh.clone();
+
         Mat imgContours = Mat.zeros(imgThreshCopy.size(), CvType.CV_8UC3);
         List<MatOfPoint> contours = new ArrayList<>();
-        
-        List<PossibleChar> listOfListsOfMatchingCharsInScene  = DetectChars.findListOfListsOfMatchingChars(listOfPossibleChars);
-        
+
+        List<PossibleChar> listOfListsOfMatchingCharsInScene = DetectChars.findListOfListsOfMatchingChars(listOfPossibleChars);
+
         listOfListsOfMatchingCharsInScene.forEach((poss) -> {
             contours.add(poss.getContour());
             System.out.println("[" + poss.getIntBoundingRectX() + "," + poss.getIntBoundingRectY() + "]");
         });
-        
+
         for (int i = 0; i < contours.size(); i++) {
-                Imgproc.drawContours(imgContours, contours, i, new Scalar(255.0, 255.0, 255.0));
+            Imgproc.drawContours(imgContours, contours, i, new Scalar(rng.nextInt(255), rng.nextInt(255), rng.nextInt(255)));
         }
         System.out.println("");
         System.out.println("step 3 - len(listOfListsOfMatchingCharsInScene) =" + listOfListsOfMatchingCharsInScene.size());
-        
+
         result.put("imgContours", imgContours);
         result.put("listOfListsOfMatchingCharsInScene", listOfListsOfMatchingCharsInScene);
         result.put("findRectLicPlates", findRectLicPlates(listOfListsOfMatchingCharsInScene));
         return result;
     }
-    
-    public static Rect findRectLicPlates( List<PossibleChar> listOfListsOfMatchingCharsInScene ) {
+
+    public static Rect findRectLicPlates(List<PossibleChar> listOfListsOfMatchingCharsInScene) {
         int minX = listOfListsOfMatchingCharsInScene.get(0).getIntCenterX();
         int posMinX = 0;
         int minY = listOfListsOfMatchingCharsInScene.get(0).getIntCenterY();
         int posMinY = 0;
-        for (int i =1 ; i< listOfListsOfMatchingCharsInScene.size(); i++) {
-            if ( listOfListsOfMatchingCharsInScene.get(i).getIntCenterX() < minX ) {
+        for (int i = 1; i < listOfListsOfMatchingCharsInScene.size(); i++) {
+            if (listOfListsOfMatchingCharsInScene.get(i).getIntCenterX() < minX) {
                 posMinX = i;
                 minX = listOfListsOfMatchingCharsInScene.get(i).getIntBoundingRectX();
             }
-            
-            if ( listOfListsOfMatchingCharsInScene.get(i).getIntCenterY() < minY ) {
+
+            if (listOfListsOfMatchingCharsInScene.get(i).getIntCenterY() < minY) {
                 posMinY = i;
                 minY = listOfListsOfMatchingCharsInScene.get(i).getIntCenterY();
             }
         }
-        
-        Rect rect = new Rect(minX - 10, minY - 20, listOfListsOfMatchingCharsInScene.get(posMinX).getIntBoundingRectWidth() * 10
-                , listOfListsOfMatchingCharsInScene.get(posMinX).getIntBoundingRectHeight() * 3);
+
+        Rect rect = new Rect(minX - 10, minY - 20, listOfListsOfMatchingCharsInScene.get(posMinX).getIntBoundingRectWidth() * 10,
+                 listOfListsOfMatchingCharsInScene.get(posMinX).getIntBoundingRectHeight() * 3);
         return rect;
     }
 

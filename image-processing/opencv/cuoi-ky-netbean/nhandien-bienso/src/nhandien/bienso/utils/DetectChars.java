@@ -7,6 +7,7 @@ package nhandien.bienso.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -37,6 +38,7 @@ public final class DetectChars {
 
     // other constants
     public static final int MIN_NUMBER_OF_MATCHING_CHARS = 3;
+    
 
     public static Boolean checkIfPossibleChar(PossibleChar possibleChar) {
         if (possibleChar.getIntBoundingRectArea() > MIN_PIXEL_AREA && possibleChar.getIntBoundingRectWidth() > MIN_PIXEL_WIDTH

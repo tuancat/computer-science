@@ -5,10 +5,6 @@
  */
 package nhandien.bienso;
 
-import java.io.File;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,9 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import nhandien.bienso.ui.BorderMainPane;
-import nhandien.bienso.ui.TopMenu;
-import nhandien.bienso.ui.VideoView;
-import nhandien.bienso.utils.Utils;
 import org.opencv.core.Core;
 
 /**
