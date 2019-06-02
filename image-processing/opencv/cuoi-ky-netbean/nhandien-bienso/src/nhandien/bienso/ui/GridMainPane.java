@@ -64,20 +64,15 @@ public class GridMainPane extends GridPane {
 //        callImageProcess(DEFAULT_URL);
     }
 
-    public void callImageProcess(String url) {
+    public HashMap callImageProcess(String url) {
         if (url == null || "".equals(url)) {
             url = DEFAULT_URL;
         }
         Mat src = Imgcodecs.imread(url);
-//        Mat resizeNewImage = ImageProcessTools.newWay(src);
-////        Mat newWay = ImageProcessTools.newWay(src);
-//        Mat greyMat = ImageProcessTools.convertImageToGray(src);
-//        Mat removeNoise = ImageProcessTools.removeNoiseAndequalizeHistImage(greyMat);
-//        Mat getMoth = ImageProcessTools.getMatMorphologyEx(removeNoise);
-//        Mat removeAllBack = ImageProcessTools.removeBackground(src);
-//        Mat candyImage = ImageProcessTools.candyImage(removeAllBack);
-//        Rect detectRect = new Rect();
-//        Mat newCoures = ImageProcessTools.find(candyImage, detectRect);
+        Mat srcClone = src.clone();
+        Mat imgGrayscale = new Mat();
+        Imgproc.cvtColor(srcClone, imgGrayscale, Imgproc.COLOR_BGR2GRAY);
+
         this.img1.setImage(Utils.mat2Image(src));
         Mat imgThresh = PreProcess.preProcess(src); //quá trình tiền sử lý
 
@@ -88,13 +83,14 @@ public class GridMainPane extends GridPane {
         this.img2.setImage(Utils.mat2Image(imgContours));
 
         //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
-        HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(imgThresh, listOfPossibleChars);
+        HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(imgGrayscale, imgThresh, listOfPossibleChars);
         Mat imgContoursFilter2 = (Mat) resultFilter2.get("imgContours");
         Rect rectLibPlate = (Rect) resultFilter2.get("findRectLicPlates");
         this.img3.setImage(Utils.mat2Image(imgContoursFilter2));
 
         Imgproc.rectangle(src, rectLibPlate, new Scalar(0, 255, 0), 3);
         this.img4.setImage(Utils.mat2Image(src));
+        return resultFilter2;
 
     }
 

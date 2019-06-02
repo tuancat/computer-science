@@ -6,16 +6,29 @@
 package nhandien.bienso.ui;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 import nhandien.bienso.utils.Utils;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
 
 /**
  *
@@ -23,20 +36,40 @@ import nhandien.bienso.utils.Utils;
  */
 public class BorderMainPane extends BorderPane {
 
+    private static final String DEFAULT_URL = "Bike/0437.jpg";
+    private Image defaultImage = new Image(getClass().getClassLoader().getResourceAsStream(DEFAULT_URL));
+
     private TopMenu topMenu;
     private GridMainPane gridCenter;
+    HashMap finalResultFilter;
     private GridPane gridRight;
     private VideoView videoView;
+    private ImageView imgRight;
     private int chooseOption = 0;
     Stage primaryStage;
+    Tesseract tesseract;
 
     public BorderMainPane() {
+        initTrainingData();
         this.setMinSize(400, 400);
         this.setPadding(new Insets(0, 10, 0, 10));
         initUI();
+
+    }
+
+    private void initTrainingData() {
+        tesseract = new Tesseract();
+        tesseract.setLanguage("eng");
+        tesseract.setDatapath("C:\\Users\\SamFisher\\Downloads\\tessdata");
+        tesseract.setTessVariable("tessedit_char_whitelist", "0123456789,/ABCDEFGHJKLMNPQRSTUVWXY");
+        tesseract.setTessVariable("language_model_penalty_non_freq_dict_word", "1");
+        tesseract.setTessVariable("language_model_penalty_non_dict_word ", "1");
+        tesseract.setTessVariable("load_system_dawg", "0");
+
     }
 
     public BorderMainPane(Stage stage) {
+        initTrainingData();
         this.primaryStage = stage;
         this.setPadding(new Insets(0, 10, 0, 10));
         // Set the Size of the VBox
@@ -81,6 +114,12 @@ public class BorderMainPane extends BorderPane {
                 + "-fx-border-radius: 5;"
                 + "-fx-border-color: grey;");
         this.setRight(gridRight);
+        imgRight = new ImageView();
+        imgRight.setImage(defaultImage);
+        imgRight.setStyle("-fx-padding: 5;"
+                + "-fx-border-style: solid inside;"
+                + "-fx-border-width: 1;");
+//        gridRight.add(imgRight, 0, 0);
     }
 
     private void initTopMenu() {
@@ -106,22 +145,60 @@ public class BorderMainPane extends BorderPane {
             );
         } else {
             int countIndex = 0;
-            listFile.forEach((file) -> {
-                if (chooseOption == 0) { //  choose image 
-                    gridCenter = new GridMainPane();
-                    this.setCenter(gridCenter);
-                    if (Utils.checkFileIsImage(file.getName())) {
-                        System.err.println("type of file:" + file.getAbsolutePath());
-                        gridCenter.callImageProcess(file.getAbsolutePath());
-                    }
+            listFile.forEach(new Consumer<File>() {
+                @Override
+                public void accept(File file) {
+                    if (chooseOption == 0) {
+                        //  choose image
+                        gridCenter = new GridMainPane();
+                        BorderMainPane.this.setCenter(gridCenter);
+                        if (Utils.checkFileIsImage(file.getName())) {
+
+                            finalResultFilter = gridCenter.callImageProcess(file.getAbsolutePath());
+                            List listImageCharsCrop = new ArrayList<Mat>();
+                            listImageCharsCrop = (List) finalResultFilter.get("listImageCharsCrop");
+                            initRightPane();
+                            System.err.println("listImageCharsCrop szize:" + listImageCharsCrop.size());
+                            int count = 0;
+                            StringBuilder fullPlate = new StringBuilder("");
+                            for (Object charsMat : listImageCharsCrop) {
+                                Image i = Utils.mat2Image((Mat) charsMat);
+                                String detectText;
+                                   
+                                if (i != null) {
+                                    Imgcodecs.imwrite("C:\\Users\\SamFisher\\Downloads\\output-image\\" + String.valueOf(count) + ".JPG", (Mat) charsMat);
+                                    try {
+                                        detectText = tesseract.doOCR(SwingFXUtils.fromFXImage(i, null));
+
+                                        fullPlate.append(detectText);
+                                    } catch (TesseractException ex) {
+                                        Logger.getLogger(BorderMainPane.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                    ImageView imageV = new ImageView();
+                                    imageV.setImage(i);
+                                    gridRight.add(imageV, count, 0);
+                                    count++;
+                                }
+                            }
+                            System.out.println("detect plate to text:" + fullPlate.toString());
+                            fullPlate.toString().replace("\n", "").replace("\r", "");
+                            Alert alert = new Alert(AlertType.INFORMATION);
+
+                            alert.setTitle("Test");
+                            alert.setHeaderText("Results:");
+                            alert.setContentText("detect plate to text:" + fullPlate.toString());
+
+                            alert.showAndWait();
+                        }
 //                    
-                }
-                if (chooseOption == 1) {
-                    videoView = new VideoView();
-                    this.setCenter(videoView);
-                    if (Utils.checkFileIsVideo(file.getName())) {
-                        System.err.println("type of file video:" + file.getAbsolutePath());
-                        videoView.processVideo(file.getAbsolutePath());
+                    }
+                    if (chooseOption == 1) {
+                        videoView = new VideoView();
+                        BorderMainPane.this.setCenter(videoView);
+                        if (Utils.checkFileIsVideo(file.getName())) {
+                            System.err.println("type of file video:" + file.getAbsolutePath());
+                            videoView.processVideo(file.getAbsolutePath());
+                        }
                     }
                 }
             });
@@ -147,7 +224,7 @@ public class BorderMainPane extends BorderPane {
 
     private void configureFileChooser(
             FileChooser fileChooser, String option) {
-        
+
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("MP4", "*.mp4"),
                 new FileChooser.ExtensionFilter("All Images", "*.*"),

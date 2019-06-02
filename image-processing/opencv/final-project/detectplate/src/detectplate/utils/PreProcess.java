@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nhandien.bienso.utils;
+package detectplate.utils;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;

@@ -111,7 +111,7 @@ public class VideoView extends BorderPane {
         List<PossibleChar> listOfPossibleChars = (List<PossibleChar>) resultFilter1.get("listOfPossibleChars");
 
         //quá trình xử lý loc ảnh lần 2 để tìm plate -> kết quả đuôc hiển thị tại hình ảnh 3
-        HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(imgThresh, listOfPossibleChars);
+        HashMap resultFilter2 = DetectPlates.findPossibleCharsInSceneFilter2(src, imgThresh, listOfPossibleChars);
         Mat imgContoursFilter2 = (Mat) resultFilter2.get("imgContours");
         Rect rectLibPlate = (Rect) resultFilter2.get("findRectLicPlates");
 
