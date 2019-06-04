@@ -10,10 +10,8 @@ import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.Scalar;
-import org.opencv.core.Size;
 import org.opencv.core.TermCriteria;
 import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
 import org.opencv.ml.Ml;
 import org.opencv.ml.SVM;
 
@@ -57,53 +55,53 @@ public class Training {
 //        clasificador.setTermCriteria(new TermCriteria(TermCriteria.MAX_ITER, 100, 1e-6));
     }
 
-    public static void main(String[] args) {
-        System.out.println("heeloo");
-        clasificador = SVM.create();
-        clasificador.setDegree(3);
-        clasificador.setType(SVM.C_SVC);
-        clasificador.setKernel(SVM.RBF);
-        clasificador.setGamma(5.0625000000000009e-01);
-        clasificador.setC(6.2500000000000000e+01);
-//        int[] labels = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-//        trainPositive("00");
-//        trainingLabels.put(0, 0, labels);
-//        train();
-        trainImages("00", 0);
-        trainImages("01", 1);
-        trainImages("02", 2);
-
-        for (int i = 0; i < 30; i++) {
-            if (i < 10) {
-                labels1[i] = 0;
-            } else if (i> 10 && i < 20){
-                labels1[i] = 1;
-            } else if (i> 20 && i < 30) {
-                labels1[i] = 2;
-            }
-
-        }
-        
-        System.out.println("trainingLabels:" + labels1.length);
-        trainingLabels.put(0, 0, labels1);
-        System.out.println("trainingLabels:" + trainingLabels.dump());
-
-        clasificador.train(trainingMat, Ml.ROW_SAMPLE, trainingLabels);
-        clasificador.save(XML);
-
-//        int[] labels1 = {1};
-//        trainPositive("01");
-//        trainingLabels.put(1, 0, labels1);
-//        train();
-//        trainPositive("01");
-//        trainPositive("03");
-//        trainPositive("04");
-//        trainPositive("05");
-//        trainPositive("06");
-//        trainNegative();
-//        trainingData();
-        test();
-    }
+//    public static void main(String[] args) {
+//        System.out.println("heeloo");
+//        clasificador = SVM.create();
+//        clasificador.setDegree(3);
+//        clasificador.setType(SVM.C_SVC);
+//        clasificador.setKernel(SVM.RBF);
+//        clasificador.setGamma(5.0625000000000009e-01);
+//        clasificador.setC(6.2500000000000000e+01);
+////        int[] labels = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+////        trainPositive("00");
+////        trainingLabels.put(0, 0, labels);
+////        train();
+//        trainImages("00", 0);
+//        trainImages("01", 1);
+//        trainImages("02", 2);
+//
+//        for (int i = 0; i < 30; i++) {
+//            if (i < 10) {
+//                labels1[i] = 0;
+//            } else if (i> 10 && i < 20){
+//                labels1[i] = 1;
+//            } else if (i> 20 && i < 30) {
+//                labels1[i] = 2;
+//            }
+//
+//        }
+//        
+//        System.out.println("trainingLabels:" + labels1.length);
+//        trainingLabels.put(0, 0, labels1);
+//        System.out.println("trainingLabels:" + trainingLabels.dump());
+//
+//        clasificador.train(trainingMat, Ml.ROW_SAMPLE, trainingLabels);
+//        clasificador.save(XML);
+//
+////        int[] labels1 = {1};
+////        trainPositive("01");
+////        trainingLabels.put(1, 0, labels1);
+////        train();
+////        trainPositive("01");
+////        trainPositive("03");
+////        trainPositive("04");
+////        trainPositive("05");
+////        trainPositive("06");
+////        trainNegative();
+////        trainingData();
+//        test();
+//    }
 
     protected static void train() {
 //        for (int i =0 ; i< 10 ; i++) {

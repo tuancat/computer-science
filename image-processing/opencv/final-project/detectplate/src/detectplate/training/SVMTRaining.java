@@ -165,13 +165,13 @@ public final class SVMTRaining {
         return result;
     }
 
-    public static void main(String[] args) {
-        initSVMTraining();
-        initSVMTRainingLabels();
-        for (int i = 0; i < number_of_class; i++) {
-            initSVMTrainingData(i);
-        }
-        trainSVM();
-        testData("C:\\Users\\SamFisher\\Downloads\\output-image\\6.JPG");
-    }
+//    public static void main(String[] args) {
+//        initSVMTraining();
+//        initSVMTRainingLabels();
+//        for (int i = 0; i < number_of_class; i++) {
+//            initSVMTrainingData(i);
+//        }
+//        trainSVM();
+//        testData("C:\\Users\\SamFisher\\Downloads\\output-image\\6.JPG");
+//    }
 }

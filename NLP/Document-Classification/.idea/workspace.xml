@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a51b59-d668-418f-b264-b369fa509f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../learning-ML/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../learning-ML/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-project/detectplate/src/detectplate/ui/BorderMainPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-project/detectplate/src/detectplate/ui/ChooseItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-project/detectplate/src/detectplate/ui/GridMainPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-project/detectplate/src/detectplate/ui/TopMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-project/detectplate/src/detectplate/ui/VideoView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/final-script.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../image-processing/opencv/final-script/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,89 +27,7 @@
     <SUITE FILE_PATH="coverage/Document_Classification$main.coverage" NAME="main Coverage Results" MODIFIED="1558235807727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/text_classification_predict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-              <folding>
-                <element signature="e#46#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transformer/feature_transformer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/svm_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="37" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/naive_bayes_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="e#47#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -144,15 +70,6 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Document-Classification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Document-Classification" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="Document-Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -281,11 +198,12 @@
       <workItem from="1557969917676" duration="5631000" />
       <workItem from="1558057008460" duration="6840000" />
       <workItem from="1558226165577" duration="3933000" />
+      <workItem from="1559444228780" duration="137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44576000" />
+    <option name="totallyTimeSpent" value="44713000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,7 +217,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14712153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,9 +273,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/read-data.py" />
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/read_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="289">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -377,7 +305,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/transformer/feature_transformer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="85">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -385,9 +313,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/svm_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="289">
           <caret line="17" column="37" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="37" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -401,23 +336,6 @@
           <caret line="20" column="33" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="e#47#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FeatureTransformer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

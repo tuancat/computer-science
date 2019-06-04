@@ -140,12 +140,8 @@ public class BorderMainPane extends BorderPane {
         SVMText.setAlignment(Pos.CENTER);
         SVMText.setStyle("-fx-border-color: blue;"
                 + "-fx-margin: 5;"
-                + "-fx-border-style: solid inside;"
-                + "-fx-border-width: 1;"
                 + "-fx-min-width:50"
                 + "-fx-min-height:50"
-                + "-fx-border-insets: 5;"
-                + "-fx-border-radius: 5;"
                 + "");
         SVMText.setFont(new Font("Arial", 40));
         gridRight.add(SVMText, 0, 0);
@@ -154,12 +150,8 @@ public class BorderMainPane extends BorderPane {
         tesseractText.setAlignment(Pos.CENTER);
         tesseractText.setStyle("-fx-border-color: blue;"
                 + "-fx-margin: 5;"
-                + "-fx-border-style: solid inside;"
-                + "-fx-border-width: 1;"
                 + "-fx-min-width:50"
                 + "-fx-min-height:50"
-                + "-fx-border-insets: 5;"
-                + "-fx-border-radius: 5;"
                 + "");
         tesseractText.setFont(new Font("Arial", 40));
         gridRight.add(tesseractText, 0, 1);
