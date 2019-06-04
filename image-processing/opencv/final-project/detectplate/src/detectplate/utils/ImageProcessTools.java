@@ -165,7 +165,7 @@ public final class ImageProcessTools {
                 Scalar color = new Scalar(rng.nextInt(256), rng.nextInt(256), rng.nextInt(256));
                 Imgproc.drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, new Point());
                 resultRect = Imgproc.boundingRect(contours.get(i));
-//                Imgproc.rectangle(drawing, resultRect, new Scalar(0,255,0), 3);
+                Imgproc.rectangle(drawing, resultRect, new Scalar(0,255,0), 3);
                 plateRect = resultRect;
                 break;
             }
